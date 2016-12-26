@@ -1,0 +1,13 @@
+<template>
+  <require from="./app.css"></require>
+  <require from="./pythagoras"></require>
+  <div class="App-header">
+    <h2>This is a dancing Pythagoras tree</h2>
+  </div>
+  <p class="App-intro">
+    <svg ref="svg" width.bind="width" height.bind="height" style="border: 1px solid lightgray">
+      <pythagoras containerless w.bind="baseW" height-factor.bind="heightFactor" lean.bind="lean" x.bind="width / 2 - 40" y.bind="height - baseW"
+        lvl.bind="0" maxlvl.bind="currentMax"></pythagoras>
+    </svg>
+  </p>
+</template>

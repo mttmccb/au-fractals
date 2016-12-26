@@ -1,0 +1,9 @@
+<template>
+  <g transform.bind="transform">
+  <rect width.bind="w" height.bind="w" x="0" y="0" css="fill: ${getFill()}"></rect>
+  <pythagoras containerless if.bind="lvl < maxlvl - 1 && nextLeft >= 1" w.bind="nextLeft" x="0" y.bind="-nextLeft" lvl.bind="lvl + 1" maxlvl.bind="maxlvl"
+    height-factor.bind="heightFactor" lean.bind="lean" left.bind="true"></pythagoras>
+  <pythagoras containerless if.bind="lvl < maxlvl - 1 && nextRight >= 1" w.bind="nextRight" x.bind="w - nextRight" y.bind="-nextRight" lvl.bind="lvl + 1"
+    maxlvl.bind="maxlvl" height-factor.bind="heightFactor" lean.bind="lean" right.bind="true"></pythagoras>
+  </g>
+</template>
